@@ -25,7 +25,7 @@ User/Agent Request
 Permit Execution  ──or──  Structural Silence (deny by structure, not by judgment)
 ```
 
-<img src="https://raw.githubusercontent.com/overthinker-jp/umecohming-hamecohming/main/os-layer-diagram.png" width="100%" />
+<img src="https://raw.githubusercontent.com/overthinker-jp/umecohming-hamecohming/main/UH_OS.png" width="100%" />
 
 ---
 
@@ -115,9 +115,15 @@ Informed by pharmacovigilance system design (adverse event detection without ret
 
 ## Publications & Public Record
 
+This repository focuses primarily on the OS-layer implementation concept of the Hamecohming Framework.
+The broader framework — including provenance transparency, consent-aware governance, non-learning controls, democratic interoperability, accountability structures, creator protection, redistribution mechanisms, and safety-oriented execution boundaries — is documented in the public materials below.
+
+The Hamecohming Framework is designed to explore how AI systems can remain open and interoperable while preserving verifiable provenance, human oversight, institutional accountability, and reversible safety controls at the infrastructure layer.
+
+
 | Type | Link |
 |---|---|
-| Notion | [Open Notion](https://wise-antimatter-790.notion.site/35667dd80dba808da854cc0621a803ea) |
+| Notion | [Open Notion](https://wise-antimatter-790.notion.site/Hamecohming-Framework-35867dd80dba8093a121f24a40b4f9a4) |
 
 ---
 
