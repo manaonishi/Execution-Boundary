@@ -5,10 +5,9 @@ from __future__ import annotations
 """
 OS Boundary Prototype — Conceptual demonstration only.
 Production enforcement is implemented at the kernel level via eBPF/LSM.
-See /ebpf/ for kernel-space implementation.
+See /ebpf/ for planned kernel-space implementation.
 """
 
-import sys
 import json
 import hashlib
 import datetime
@@ -30,8 +29,9 @@ class OSBoundary:
         return self.rule_hash == self._hash(self.hame_rules)
 
     def match(self, ume_attributes: list[str]) -> bool:
+        # Prototype-level deterministic attribute matching
         return all(rule in ume_attributes for rule in self.hame_rules)
-
+      
     def verify(self, ume_attributes: list[str]) -> tuple[str, dict]:
         if not self._verify_integrity():
             result = "INTEGRITY_VIOLATION"
@@ -52,8 +52,8 @@ class OSBoundary:
 
         if result == "STRUCTURAL_SILENCE":
             print(f"[STRUCTURAL_SILENCE] Execution denied. See {LOG_PATH}")
-            sys.exit(1)
-
+            raise PermissionError("STRUCTURAL_SILENCE")
+        
         return result, log
 
     def _write_log(self, log: dict):
