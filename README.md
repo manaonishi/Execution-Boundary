@@ -60,11 +60,11 @@ Demonstrates the boundary logic in a readable form.
 Not OS-level; intended as a specification reference.
 
 ```bash
-python os/boundary.py
+python os/prototype/boundary.py
 ```
 
 - Tag matching with tamper detection (SHA-256 rule hash)
-- Structural Silence that actually halts execution (`sys.exit(1)`)
+- Structural Silence that actually halts execution (`PermissionError`)
 - Persistent audit log at `logs/boundary_audit.jsonl`
 
 ### Kernel-level enforcement (eBPF/LSM)
@@ -73,7 +73,7 @@ The production implementation enforces the same boundary conditions at the kerne
 
 ```bash
 # Load the LSM hook (requires root)
-sudo python ebpf/loader.py
+Kernel-space implementation planned (work in progress)
 ```
 
 See `/ebpf/` for the kernel-space implementation.
@@ -88,7 +88,7 @@ See `/ebpf/` for the kernel-space implementation.
 Conceptual prototype — not a secure enforcement layer.
 
 - User-space execution → integrity can be bypassed in a compromised runtime
-- `sys.exit(1)` → hard stop by design (no recovery path)
+- `PermissionError` → hard stop by design (no recovery path)
 - Audit logs → writable and not tamper-resistant
 
 Not flaws. Scope.
