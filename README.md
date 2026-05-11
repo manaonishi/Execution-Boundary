@@ -1,4 +1,4 @@
-# Hamecohming Framework
+# Framework for AI Governance: Hamecohming Framework
 
 > **OS-level AI governance that enforces boundaries — not opinions.**
 
