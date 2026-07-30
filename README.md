@@ -1,11 +1,13 @@
-# Framework for AI Governance: Hamecohming Framework
+# Execution Boundary
+### An OS-Level Architecture for AI Governance
 
-> **OS-level AI governance that enforces boundaries — not opinions.**
+> **OS-level AI governance that enforces boundaries, not opinions.**
 
-AI safety should not depend on whether the model makes good decisions.  
-It should depend on whether execution is permitted at the system level in the first place.
+Execution Boundary is an OS-level enforcement component of the broader AI Governance OS architecture.
 
-This framework enforces provenance, consent, and domain constraints at the **kernel execution boundary** — deterministically, without semantic interpretation.
+This work was previously published under the name *Hamecohming Framework*.
+
+Rather than relying solely on probabilistic model alignment, it explores deterministic execution control at the operating system boundary using provenance, consent, and policy verification.
 
 ---
 
@@ -13,7 +15,7 @@ This framework enforces provenance, consent, and domain constraints at the **ker
 
 Model-level alignment is probabilistic. It can be overridden by prompting, fine-tuning, or context manipulation.
 
-The Hamecohming Framework moves the enforcement point **below** the model:
+The proposed architecture moves the enforcement point below the model:
 
 ```text
 User/Agent Request
@@ -115,17 +117,11 @@ Informed by pharmacovigilance system design (adverse event detection without ret
 
 ## Publications & Public Record
 
-This repository focuses primarily on the OS-layer implementation concept of the Hamecohming Framework.
-The broader framework — including provenance transparency, consent-aware governance, non-learning controls, democratic interoperability, accountability structures, creator protection, redistribution mechanisms, and safety-oriented execution boundaries — is documented in the public materials below.
+This repository focuses primarily on the OS-layer implementation concept of the broader governance architecture.
 
-The Hamecohming Framework is designed to explore how AI systems can remain open and interoperable while preserving verifiable provenance, human oversight, institutional accountability, and reversible safety controls at the infrastructure layer.
+The broader framework, including provenance transparency, consent-aware governance, non-learning controls, democratic interoperability, accountability structures, creator protection, redistribution mechanisms, and safety-oriented execution boundaries, is being developed as part of the overall Hamecohming Framework.
 
-
-| Type | Link |
-|---|---|
-| Notion | [Open Notion](https://wise-antimatter-790.notion.site/Hamecohming-Framework-35867dd80dba8093a121f24a40b4f9a4) |
-
----
+This repository is intended as the public technical reference for the Execution Boundary concept.
 
 ## Status
 
