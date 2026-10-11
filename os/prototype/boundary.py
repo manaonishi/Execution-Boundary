@@ -4,7 +4,7 @@ from __future__ import annotations
 
 """
 OS Boundary Prototype — Conceptual demonstration only.
-Production enforcement is implemented at the kernel level via eBPF/LSM.
+Future OS-level enforcement is proposed using eBPF/LSM.
 See /ebpf/ for planned kernel-space implementation.
 """
 
@@ -50,10 +50,10 @@ class OSBoundary:
 
         self._write_log(log)
 
-        if result == "STRUCTURAL_SILENCE":
-            print(f"[STRUCTURAL_SILENCE] Execution denied. See {LOG_PATH}")
-            raise PermissionError("STRUCTURAL_SILENCE")
-        
+        if result in ("STRUCTURAL_SILENCE", "INTEGRITY_VIOLATION"):
+            print(f"[{result}] Execution denied. See {LOG_PATH}")
+            raise PermissionError(result)
+
         return result, log
 
     def _write_log(self, log: dict):
